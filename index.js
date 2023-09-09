@@ -9,6 +9,10 @@ mongoose.connect(process.env.MONGODB_URI);
 const websiteRoutes = require("./routes/website2");
 app.use(websiteRoutes);
 
+app.get("/", (req, res) => {
+  res.json("L'API website de HD7594");
+});
+
 app.listen(process.env.PORT, (req, res) => {
   console.log("server in service");
 });
